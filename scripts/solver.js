@@ -66,7 +66,7 @@ export function check()
           }
         }
       
-        // Check 3x3 subgrids
+        // Check 3x3 sub grids
         for (let b = 0; b < 9; b++) {
           const seen = new Set();
           const sr = Math.floor(b / 3) * 3;
@@ -121,7 +121,7 @@ const getChoices = (board, index) => {
     return choices
 }
 
-//finding all the possible number for the index and then returning the number that has least possiblity of number to use at that index
+//finding all the possible number for the index and then returning the number that has least possibility of number to use at that index
 const bestBet = (board) => {
     let index, moves, bestLen = 100
     for (let i = 0; i < 81; ++i) {
@@ -138,7 +138,7 @@ const bestBet = (board) => {
     return { index, moves }
 }
 
-//recurvise function
+//recursive function
 export const solve = () => {
     let { index, moves } = bestBet(board) 
     if(index==null) return true
